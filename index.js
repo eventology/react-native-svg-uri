@@ -170,7 +170,7 @@ class SvgUri extends Component{
       if (this.props.height) {
         componentAtts.height = this.props.height;
       }
-
+      childs = childs.filter((child) => typeof child !== 'string');
       return <Svg key={i} {...componentAtts}>{childs}</Svg>;
     case 'g':
       componentAtts = this.obtainComponentAtts(node, G_ATTS);
